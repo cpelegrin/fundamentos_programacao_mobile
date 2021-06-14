@@ -13,8 +13,28 @@ class MyApp extends StatelessWidget {
           primaryColor: Colors.green,
           primaryColorDark: Colors.green[900],
           accentColor: Colors.amber[900]),
-      home: Container(
-        color: Colors.white,
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text("Título"),
+        ),
+        body: Container(
+          color: Colors.white,
+          child: Center(
+            child: Text(
+              "Hello World!",
+              style: TextStyle(
+                fontSize: 26,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ),
+        ),
+        floatingActionButton: FloatingActionButton(
+          onPressed: () {
+            print("Funciona o Click");
+          },
+          child: Icon(Icons.import_contacts),
+        ),
       ),
     );
   }
