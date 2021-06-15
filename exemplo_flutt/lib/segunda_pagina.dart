@@ -24,9 +24,35 @@ class _SegundaPaginaState extends State<SegundaPagina> {
               },
               child: Text("Incrementa Contador"),
             ),
-            Text("$count"),
+            SizedBox(
+              width: 20,
+            ),
+            Text(
+              "$count",
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 32,
+              ),
+            ),
+            SizedBox(
+              width: 20,
+            ),
+            ElevatedButton(
+              onPressed: () {
+                setState(() {
+                  count--;
+                });
+              },
+              child: Text("Decrementa Contador"),
+            ),
           ],
         ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Navigator.pop(context);
+        },
+        child: Icon(Icons.arrow_back),
       ),
     );
   }
