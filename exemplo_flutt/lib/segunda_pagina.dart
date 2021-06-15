@@ -13,7 +13,20 @@ class _SegundaPaginaState extends State<SegundaPagina> {
       appBar: AppBar(
         title: Text("Segunda Página"),
       ),
-      body: Container(
+      body: _body(),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Navigator.pop(context);
+        },
+        child: Icon(Icons.arrow_back),
+      ),
+    );
+  }
+
+  _body() {
+    return Container(
+      child: Padding(
+        padding: const EdgeInsets.all(8.0),
         child: Row(
           children: [
             ElevatedButton(
@@ -47,12 +60,6 @@ class _SegundaPaginaState extends State<SegundaPagina> {
             ),
           ],
         ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          Navigator.pop(context);
-        },
-        child: Icon(Icons.arrow_back),
       ),
     );
   }
