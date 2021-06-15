@@ -1,3 +1,4 @@
+import 'package:exemplo_flutt/segunda_pagina.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -23,7 +24,9 @@ class HomePage extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          print("Funciona o Click");
+          Navigator.push(context, MaterialPageRoute(builder: (context) {
+            return SegundaPagina();
+          }));
         },
         child: Icon(Icons.import_contacts),
       ),
